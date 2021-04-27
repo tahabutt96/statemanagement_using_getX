@@ -11,11 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      getPages: [
+        GetPage(name: "/home", page: () => homepage()),
+      ],
+
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: homepage(),
+      initialRoute: '/home',
+      //home: homepage(),
     );
   }
 }
